@@ -27,6 +27,6 @@ class CreateHeroClassesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('classes');
+        Schema::dropIfExists('hero_classes');
     }
 }

@@ -12,16 +12,18 @@ class Hero extends Model
      * @var array
      */
     protected $fillable = [
+        'name',
         'life_points',
         'damage',
         'defense',
         'damage',
         'speed',
         'attack_speed',
+        'class_id'
     ];
 
 
     public function heroClass(){
-        return $this->hasOne('App\HeroClass');
+        return $this->hasOne('App\HeroClass', 'id', 'class_id');
     }
 }

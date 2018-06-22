@@ -20,10 +20,8 @@ class CreateHeroesTable extends Migration
             $table->unsignedInteger('life_points');
             $table->unsignedInteger('damage');
             $table->unsignedInteger('defense');
-            $table->unsignedInteger('damage');
             $table->unsignedInteger('speed');
-            $table->unsignedInteger('attack_speed');
-            $table->foreign('class_id')->references('id')->on('class');
+            $table->float('attack_speed', 2, 1);
             $table->timestamps();
         });
     }
